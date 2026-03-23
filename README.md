@@ -68,3 +68,81 @@ npm run test:e2e
 ```sh
 npm run lint
 ```
+
+## Docker
+
+This project includes:
+
+- `Dockerfile.dev` for development with hot-reload (Vite on port `5173`)
+- `Dockerfile.prod` for production (Nginx serving the `dist/` build on port `80`)
+
+### Quick Start with Makefile
+
+Development:
+
+```sh
+make run-dev
+```
+
+Production:
+
+```sh
+make run-prod
+```
+
+Stop containers:
+
+```sh
+make stop-dev
+make stop-prod
+```
+
+Useful targets:
+
+```sh
+make build-dev
+make build-prod
+make logs-dev
+make logs-prod
+make clean
+```
+
+Safe prune (project only):
+
+```sh
+make prune
+```
+
+Global prune (all Docker unused resources):
+
+```sh
+make prune-all
+```
+
+### Run with Docker Commands (without Makefile)
+
+Development image and container:
+
+```sh
+docker build -f Dockerfile.dev -t fatec-vue-dev .
+docker run --rm -it \
+  --name fatec-vue-dev \
+  -e CHOKIDAR_USEPOLLING=true \
+  -e CHOKIDAR_INTERVAL=100 \
+  -p 5173:5173 \
+  -v "${PWD}:/app" \
+  -v /app/node_modules \
+  fatec-vue-dev
+```
+
+Production image and container:
+
+```sh
+docker build -f Dockerfile.prod -t fatec-vue-prod .
+docker run --rm -d --name fatec-vue-prod -p 8080:80 fatec-vue-prod
+```
+
+Open in browser:
+
+- Dev: `http://localhost:5173`
+- Prod: `http://localhost:8080`
