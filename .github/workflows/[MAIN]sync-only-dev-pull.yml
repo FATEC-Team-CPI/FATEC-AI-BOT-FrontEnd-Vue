@@ -1,9 +1,10 @@
+# .github/workflows/enforce-pr-from-develop.yml
 name: Enforce PR from develop
 
 on:
   pull_request:
     branches:
-      - main
+      - main  # ← só dispara quando o destino for main
 
 jobs:
   check-source-branch:
