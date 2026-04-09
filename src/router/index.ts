@@ -6,17 +6,26 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: () => import('../views/LoginView.vue'),
+      component: () => import('../Views/LoginView.vue'),
+      meta: { transition: 'transition-normal' },
     },
     {
       path: '/register',
       name: 'register',
-      component: () => import('../views/RegisterView.vue'),
+      component: () => import('../Views/RegisterView.vue'),
+      meta: { transition: 'transition-normal' },
     },
     {
       path: '/menu',
       name: 'menu',
-      component: () => import('../views/MenuView.vue'),
+      component: () => import('../Views/MenuView.vue'),
+      meta: { transition: 'transition-normal' },
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: () => import('../Views/AdminView.vue'),
+      meta: { transition: 'transition-normal' },
     },
   ],
 })

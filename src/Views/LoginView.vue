@@ -4,9 +4,9 @@
     <section class="app">
       <section class ="app-container app-container-stripe">
         <form class ="input-area">
-        <section class ="title-card">
-          <h1 >LOGIN</h1>
-          <h2 >Insira suas credenciais para entrar no sistema</h2>
+        <section >
+          <h1 class="app-title">LOGIN</h1>
+          <h2 class="app-subtitle">Insira suas credenciais para entrar no sistema</h2>
         </section>
         
           <input class="input" type="email" name="email" placeholder="Email">
@@ -16,7 +16,7 @@
         </form>
         
       </section>
-      <img src="./logo.png" alt="">
+      <img class="logo-fatec" src="../assets/logo.png" alt="Fatec e Centro Paula Souza">
     </section>
 </template>
 

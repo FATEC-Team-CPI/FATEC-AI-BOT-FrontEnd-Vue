@@ -6,8 +6,8 @@
     <h2 class="app-subtitle">Escolha uma opção para continuar</h2>
 
     <div class="app-form">
-      <button class="form-btn">Registrar</button>
-      <button class="form-btn">Entrar</button>
+      <router-link to="/register" class="form-btn" tag="button">Registrar</router-link>
+      <router-link to="/login" class="form-btn" tag="button">Entrar</router-link>
     </div>
   </div>
 </template>
