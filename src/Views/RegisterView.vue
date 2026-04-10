@@ -1,6 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
+  <router-link to="/menu" tag="button" class="seta"><img src="../assets/seta.png" alt=""></router-link>
   <div class="app-container app-container-bar">
     <section>
       <h1 class="app-title">CADASTRO</h1>
@@ -53,4 +54,4 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped src="../assets/register.css"></style>

@@ -27,6 +27,12 @@ const router = createRouter({
       component: () => import('../Views/AdminView.vue'),
       meta: { transition: 'transition-normal' },
     },
+    {
+      path: '/password-reset',
+      name: 'reset',
+      component: () => import('../Views/ResetPassword.vue'),
+      meta: { transition: 'transition-normal' },
+    },
   ],
 })
 

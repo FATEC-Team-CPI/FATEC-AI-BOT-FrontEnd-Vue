@@ -27,4 +27,4 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped src="../assets/admin.css"></style>

@@ -70,32 +70,27 @@ body {
 }
 
 
-.title-card{
-  margin-bottom: 10%;
-}
-
-.title-card h1{
-  color: var(--color-primary-light);
-}
-
-.title-card h2{
-    color: var(--color-neutral);
-    font-size: 18px;
-}
-
-
 .app-background {
   min-height: 100vh;
-  background: var(--bg-image);
-  background-size: cover;
+  background-image: var(--bg-image);
   background-position: center;
   background-repeat: no-repeat;
+
+
+  background-size: 100%;
+
+  animation: zoom 10s ease-in-out infinite alternate;
 }
 
-.app {
-  display: flex;
-  flex-direction: row;
+@keyframes zoom {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 105%;
+  }
 }
+
 
 .app-container {
   min-height: 100vh;
@@ -105,6 +100,7 @@ body {
   justify-content: center;
   gap: var(--spacing-xs);
   background: var(--color-white);
+  transition: var(--transition-normal);
 }
 
 .app-container-stripe {
@@ -143,58 +139,29 @@ body {
   margin-bottom: var(--spacing-sm);
 }
 
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: .25rem;
-}
-
-.form-group label {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--color-primary);
-}
-
-.form-group input {
-  padding: 1rem;
-}
-
-.btn {
-  padding: 5%;
-  width: 100%;
-  margin-top: 5%;
+.form-btn {
+  padding: 1.2rem var(--spacing-xl);
   background-color: var(--color-primary);
   color: var(--color-white);
   border: none;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   font-size: 1.25rem;
   font-weight: 700;
   cursor: pointer;
   align-self: center;
-
+  margin-top: -2rem;
+  text-decoration: none;
+  text-align: center;
+  
   transition: var(--transition-normal);
 }
 
-.btn:hover {
+
+
+.form-btn:hover {
   background-color: var(--color-primary-light);
-  transform: translateY(-1px);
   box-shadow: var(--shadow-md);
-}
-
-.btn:active {
-  background-color: var(--color-primary-dark);
-  transform: scale(0.98);
-}
-
-
-
-
-.input-area {
-  padding-top: 10%;
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
+  transform: translateY(-2px);
 }
 
 .input {
@@ -209,63 +176,6 @@ body {
   transition: var(--transition-fast);
 }
 
-.form-group input:focus {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 1px rgba(178, 0, 0, 0.1);
-}
-
-.form-btn {
-  padding: 1.2rem var(--spacing-xl);
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 1.25rem;
-  font-weight: 700;
-  cursor: pointer;
-  align-self: center;
-  margin-top: -2rem;
-  text-decoration: none;
-  text-align: center;
-
-  transition: var(--transition-normal);
-}
-
-.adm-btn {
-  padding:  1.2rem .5rem;
-  background-color: var(--color-white);
-  color: var(--color-primary-light);
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 1.25rem;
-  font-weight: 700;
-  cursor: pointer;
-  align-self: center;
-  margin-top: -2rem;
-  text-decoration: none;
-  text-align: center;
-  box-shadow: var(--shadow-lg);
-  transition: var(--transition-normal);
-  margin-bottom: 10%;
-  width: 70%;
-}
-
-.adm {
-  margin-bottom: 5%;
-}
-
-.adm-btn:hover {
-  background-color: #c7c7c7;
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.form-btn:hover {
-  background-color: var(--color-primary-light);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
 .link {
   margin-top: -5%;
   color: var(--color-primary);
@@ -274,8 +184,28 @@ body {
   font-weight: 500;
 }
 
-.logo-fatec{
-  margin: auto;
-  width: 30%;
-  height: auto;
+
+.seta{
+  top: 4rem;
+  left: .5rem;
+  position: absolute;
+  border-radius: 100%;
+  height: 2.5rem;
+  outline: 2px none var(--color-primary-light);
+}
+
+.seta img{
+  margin-top: .5rem;
+  width: 2.5rem;
+  animation: move-left 0.5s ease-in-out infinite alternate;
+}
+
+.seta:hover {
+  background-color: var(--color-primary-light);
+  outline: 8px solid var(--color-primary-light); 
+}
+
+@keyframes move-left {
+  0% {transform: translateX(-5px);}
+  100% {transform: translateX(2px);}
 }

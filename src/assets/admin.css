@@ -1,0 +1,28 @@
+.adm-btn {
+  padding:  1.2rem .5rem;
+  background-color: var(--color-white);
+  color: var(--color-primary-light);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: center;
+  margin-top: -2rem;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+  margin-bottom: 10%;
+  width: 70%;
+}
+
+.adm {
+  margin-bottom: 5%;
+}
+
+.adm-btn:hover {
+  background-color: #c7c7c7;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
