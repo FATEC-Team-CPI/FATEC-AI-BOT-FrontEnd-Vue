@@ -33,6 +33,12 @@ const router = createRouter({
       component: () => import('../Views/ResetPassword.vue'),
       meta: { transition: 'transition-normal' },
     },
+    {
+      path: '/docs',
+      name: 'docs',
+      component: () => import('../Views/DocSelect.vue'),
+      meta: { transition: 'transition-normal' },
+    },
   ],
 })
 

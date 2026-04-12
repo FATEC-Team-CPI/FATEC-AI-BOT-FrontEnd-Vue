@@ -1,6 +1,6 @@
 .adm-btn {
   padding:  1.2rem .5rem;
-  background-color: var(--color-white);
+  background-color: var(--color-primary);
   color: var(--color-primary-light);
   border: none;
   border-radius: var(--radius-md);
@@ -14,7 +14,21 @@
   box-shadow: var(--shadow-lg);
   transition: var(--transition-normal);
   margin-bottom: 10%;
-  width: 70%;
+  width: 30%;
+}
+
+.app-form{
+  gap: var(--spacing-xs);
+  display: flex;
+}
+
+.adm-btn p{
+  margin-top: 1rem;
+}
+
+.adm-content{
+  margin: auto;
+  filter: brightness(100);
 }
 
 .adm {
@@ -22,7 +36,13 @@
 }
 
 .adm-btn:hover {
-  background-color: #c7c7c7;
+  background-color: var(--color-primary-light);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
+
+
+.icon-cog{
+  margin: auto;
+}
+
