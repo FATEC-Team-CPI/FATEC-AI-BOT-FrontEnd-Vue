@@ -39,6 +39,12 @@ const router = createRouter({
       component: () => import('../Views/DocSelect.vue'),
       meta: { transition: 'transition-normal' },
     },
+    {
+      path: '/chat',
+      name: 'chat',
+      component: () => import('../Views/ChatRoom.vue'),
+      meta: { transition: 'transition-normal' },
+    },
   ],
 })
 

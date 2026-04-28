@@ -18,6 +18,8 @@
 :root {
   /* CORES BASE */
   --color-white: #ffffff;
+  --color-gray: #EBEBEB;
+  --color-darker-gray: #c1c1c1;
   --color-black: #000000;
 
   --color-primary: #b20000;
