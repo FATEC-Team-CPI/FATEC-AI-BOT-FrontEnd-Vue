@@ -28,6 +28,12 @@ const router = createRouter({
       meta: { transition: 'transition-normal' },
     },
     {
+      path: '/usuarios',
+      name: 'usuarios',
+      component: () => import('../Views/UserListView.vue'),
+      meta: { transition: 'transition-normal' },
+    },
+    {
       path: '/password-reset',
       name: 'reset',
       component: () => import('../Views/ResetPassword.vue'),

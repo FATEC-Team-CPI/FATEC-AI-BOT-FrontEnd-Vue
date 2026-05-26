@@ -18,6 +18,13 @@
           <p>Cadastrar um Novo Usuário</p>
         </section>
       </router-link>
+
+      <router-link to="/usuarios" class="adm-btn" tag="button">
+        <section class="adm-content">
+          <img class="icon-cog" src="../assets/Vector.png" alt="">
+          <p>Listar Usuarios</p>
+        </section>
+      </router-link>
     </div>
   </div>
 </template>
