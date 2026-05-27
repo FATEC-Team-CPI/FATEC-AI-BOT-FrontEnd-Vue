@@ -7,7 +7,7 @@
     <div class="app-form">
       <router-link to="docs" class="adm-btn" tag="button">
         <section class="adm-content">
-        <img class="icon-cog" src="../assets/Vector.png" alt="">
+        <img class="icon-cog" id="cloudwhite" src="../assets/cloud-white.png" alt="">
         <p>Adicionar Documentos</p>
       </section>
       </router-link>
@@ -21,8 +21,16 @@
 
       <router-link to="/usuarios" class="adm-btn" tag="button">
         <section class="adm-content">
-          <img class="icon-cog" src="../assets/Vector.png" alt="">
+          <img class="icon-cog" src="../assets/users.png" alt="">
           <p>Listar Usuarios</p>
+        </section>
+      </router-link>
+
+      
+        <router-link to="/arquivos" class="adm-btn" tag="button">
+        <section class="adm-content">
+          <img class="icon-cog" src="../assets/file.png" alt="">
+          <p>Listar Arquivos</p>
         </section>
       </router-link>
     </div>
