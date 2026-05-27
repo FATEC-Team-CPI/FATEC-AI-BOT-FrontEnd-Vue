@@ -31,6 +31,12 @@ const users: User[] = [
     email: 'diego.almeida@fatec.sp.gov.br',
     perfil: 'Aluno',
   },
+  {
+    id: 5,
+    nome: 'Maria Souza',
+    email: 'maria.souza@fatec.sp.gov.br',
+    perfil: 'Aluno',
+  },
 ]
 </script>
 
